@@ -13,7 +13,7 @@ const { id } = useParams();
 
 useEffect(()=>{
   fetchProduct();
-},[id])
+})
 
 
 const fetchProduct = ( async ()=>{

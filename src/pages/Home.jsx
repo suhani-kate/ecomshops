@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import './Home.css'
 
@@ -53,7 +53,7 @@ function Home() {
 
     setFiltered(temp);
     setCurrentPage(1); // Reset to page 1 on filters
-  }, [search, selectedCategory, priceRange]);
+  }, [search,products, selectedCategory, priceRange]);
 
   const indexOfLast = currentPage * productsPerPage;
   const indexOfFirst = indexOfLast - productsPerPage;
