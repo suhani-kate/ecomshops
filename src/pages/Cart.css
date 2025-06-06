@@ -1,0 +1,219 @@
+/* Cart Container */
+.cart-container {
+  padding: 2rem !important;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  margin-top: 2rem;
+}
+
+/* Empty Cart */
+.empty-carts {
+  text-align: center;
+  padding: 1rem;
+  background-color: orangered;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.empty-carts > i { 
+    margin-left: 10px;
+}
+
+.empty-cart h2 {
+  color: #6366f1;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.empty-cart a {
+  display: inline-block;
+  background: #6366f1;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.empty-cart a:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Cart Items List */
+.cart-items {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 2rem 0;
+}
+
+.cart-item {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 1.5rem 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem !important;
+  margin: 0 -1rem !important;
+}
+
+/* Item Image */
+.cart-item img {
+  width: 70px !important;
+  height: 70px;
+  object-fit: contain;
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Item Details */
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.item-info h4 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.item-info p {
+  margin: 0.5rem 0 0;
+  color: #6366f1;
+  font-weight: 700;
+}
+
+/* Remove Button */
+.remove-btn {
+  background: #ce2a05 !important;
+  color: white !important;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #e1311d !important;
+  transform: translateY(-2px);
+}
+
+/* Cart Total */
+.cart-total {
+  font-size: 1.5rem;
+  color: #1e293b;
+  text-align: right;
+  margin: 1.5rem 0;
+}
+
+.cart-total span {
+  color: #6366f1;
+  font-weight: 700;
+}
+
+/* Action Buttons */
+.cart-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.clear-cart {
+  background: #64748b !important;
+  color: white !important;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-cart:hover {
+  background: #475569 !important;
+}
+
+.checkout-btn {
+  background: #6366f1 !important;
+  color: white !important;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.checkout-btn:hover {
+  background: #4f46e5 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 1rem !important;
+  }
+  
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+  
+  .item-details {
+    width: 100%;
+  }
+  
+  .cart-actions {
+    flex-direction: column;
+  }
+  
+  .cart-actions button,
+  .cart-actions a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cart-item {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.cart-item:nth-child(1) { animation-delay: 0.1s; }
+.cart-item:nth-child(2) { animation-delay: 0.2s; }
+.cart-item:nth-child(3) { animation-delay: 0.3s; }
